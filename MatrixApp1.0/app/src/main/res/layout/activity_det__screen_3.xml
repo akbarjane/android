@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageView2"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:onClick="det_back"
+            android:paddingLeft="10dp"
+            android:theme="?attr/actionBarTheme"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Определитель (3х3)" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/d_3_m_sc1"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|right|center_vertical"
+            android:text="("
+            android:textSize="100dp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m1"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:hint="a11"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m2"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:hint="a12"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m3"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:hint="a13"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a21"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a22"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a23"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a31"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a32"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/d_3_m9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a33"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/d_3_m_sc2"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|right|center_vertical"
+            android:text=")"
+            android:textSize="100dp" />
+
+        <Button
+            android:id="@+id/btn_det_3"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="det3"
+            android:text="Решить" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/design_default_color_primary_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/d_3_title_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пожалуйста введите переменные"
+                android:gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/d_3_textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/matrix_size" />
+
+                <TextView
+                    android:id="@+id/d_3_sc_a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-30dp"
+                    android:text=""
+                    android:textSize="110dp" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/d_3_d_a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="0"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="0"
+                        app:layout_row="1" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="1"
+                        app:layout_row="1" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="2"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="2"
+                        app:layout_row="1" />
+
+                    <TextView
+                        android:id="@+id/d_3_d_a9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/view_m_n"
+                        android:text=""
+                        android:textSize="@dimen/matrix_size"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/d_3_sc_a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-30dp"
+                    android:text=""
+                    android:textSize="110dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/d_3_d_a_g1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/matrix_size" />
+
+            <TextView
+                android:id="@+id/d_3_d_a_g8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/matrix_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

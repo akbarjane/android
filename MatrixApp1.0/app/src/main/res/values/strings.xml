@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MatrixMath</string>
+    <string name="test">Введите ваше уравнение</string>
+</resources>

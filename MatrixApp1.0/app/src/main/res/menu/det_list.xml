@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Det_Screen_3"
+        android:title="Определитель (3x3)"
+        android:onClick="Det_list_selected"/>
+
+    <item
+        android:title="Определитель (2x2)"
+        android:id="@+id/Det_Screen_2"
+        android:onClick="Det_list_selected"/>
+
+    <item
+        android:title="Обратная матрица(3x3)"
+        android:id="@+id/Rev_Screen_3"
+        android:onClick="Det_list_selected"/>
+
+    <item
+        android:title="Обратная матрица (2x2)"
+        android:id="@+id/Rev_Screen_2"
+        android:onClick="Det_list_selected"/>
+
+    <item
+        android:title="Миноры"
+        android:id="@+id/Minor_Screen"
+        android:onClick="Det_list_selected"/>
+
+    <item
+        android:title="Ранг"
+        android:id="@+id/Rang_Screen"
+        android:onClick="Det_list_selected"/>
+
+</menu>
