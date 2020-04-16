@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageView2"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:onClick="det_back"
+            android:paddingLeft="10dp"
+            android:theme="?attr/actionBarTheme"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Обратная матрица (3х3)" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/r_3_m_sc1"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|right|center_vertical"
+            android:text="("
+            android:textSize="100dp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m1"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:hint="a11"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m2"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:hint="a12"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m3"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:hint="a13"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a21"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a22"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a23"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a31"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a32"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/r_3_m9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a33"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/r_3_m_sc2"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|right|center_vertical"
+            android:text=")"
+            android:textSize="100dp" />
+
+        <Button
+            android:id="@+id/btn_rev_3"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="rev3"
+            android:text="Решить" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/design_default_color_primary_dark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rev_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/rev_3_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="@string/test"
+                android:textSize="@dimen/matrix_size" />
+
+            <TextView
+                android:id="@+id/rev_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/matrix_size" />
+
+            <TextView
+                android:id="@+id/rev_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/matrix_size" />
+
+            <TextView
+                android:id="@+id/rev_3_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/matrix_size" />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#86110909"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/algebra_dop_r3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rev_3_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/dop_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_1_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_1_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_1_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_1_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_1_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_1_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_1_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_1_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_2_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_2_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_2_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_2_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_2_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_2_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_2_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_2_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_3_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_3_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_3_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_3_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_3_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_3_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_3_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_4_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_4_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_4_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_4_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_4_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_4_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_4_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_4_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_5_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_5_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_5_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_5_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_5_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_5_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_5_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_5_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_6_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_6_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_6_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_6_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_6_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_6_6"
+                            android:layout_width="19dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_6_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_6_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_6_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_7_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_7_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_7_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_7_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_7_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_7_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_7_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_7_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_8_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_8_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_8_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_8_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_8_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_8_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_8_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_8_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_8_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dop_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dop_9_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:id="@+id/dop_9_2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dop_9_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_9_4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/dop_9_5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="0"
+                            app:layout_row="1" />
+
+                        <TextView
+                            android:id="@+id/dop_9_6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/matrix_size"
+                            app:layout_column="1"
+                            app:layout_row="1" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <View
+                        android:id="@+id/dop_9_7"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#A9090505"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/dop_9_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+                    <TextView
+                        android:id="@+id/dop_9_9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/matrix_size" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/r_a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/r_answ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+
+                <TextView
+                    android:id="@+id/r_answ_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+                <TextView
+                    android:id="@+id/r_answ_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+                <TextView
+                    android:id="@+id/r_answ_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+
+                <TextView
+                    android:id="@+id/r_answ_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+                <TextView
+                    android:id="@+id/r_answ_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+                <TextView
+                    android:id="@+id/r_answ_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+
+                <TextView
+                    android:id="@+id/r_answ_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+                <TextView
+                    android:id="@+id/r_answ_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+                <TextView
+                    android:id="@+id/r_answ_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/matrix_size" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ariph_1"
+        android:onClick="Ariph_list_selected"
+        android:title="Сложение матриц" />
+    <item
+        android:id="@+id/ariph_2"
+        android:onClick="Ariph_list_selected"
+        android:title="Вычитание матриц" />
+    <item
+        android:id="@+id/ariph_3"
+        android:onClick="Ariph_list_selected"
+        android:title="Умножение матриц" />
+    <item
+        android:id="@+id/ariph_4"
+        android:onClick="Ariph_list_selected"
+        android:title="Умножение матриц на целое число" />
+</menu>

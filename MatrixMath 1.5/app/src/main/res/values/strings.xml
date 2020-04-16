@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MatrixMath</string>
+    <string name="test">Введите ваше уравнение</string>
+    <string name="menu_1">Калькулятор</string>
+    <string name="menu_2">Решение линейных уравнений</string>
+    <string name="menu_3">Другие операции с матрицами</string>
+    <string name="menu_4">Арифметические операции</string>
+</resources>

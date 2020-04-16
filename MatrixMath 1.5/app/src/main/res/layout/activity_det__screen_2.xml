@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/Det_2_back"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:onClick="det_back"
+            android:paddingLeft="10dp"
+            android:theme="?attr/actionBarTheme"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Определитель (2х2)" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/d_2_m_sc1"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/d_2_m_sc2"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="25dp"
+            android:background="#131212" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_column="0"
+                app:layout_row="0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/d_2_a11"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:hint="x1"
+                    android:inputType="numberSigned"
+                    android:padding="@dimen/m_pad"
+                    android:textSize="@dimen/matrix_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_column="1"
+                app:layout_row="0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/d_2_a12"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:hint="y1"
+                    android:inputType="numberSigned"
+                    android:padding="@dimen/m_pad"
+                    android:textSize="@dimen/matrix_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_column="0"
+                app:layout_row="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/d_2_a21"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:hint="x2"
+                    android:inputType="numberSigned"
+                    android:padding="@dimen/m_pad"
+                    android:textSize="@dimen/matrix_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/d_2_a22"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:hint="y2"
+                    android:inputType="numberSigned"
+                    android:padding="@dimen/m_pad"
+                    android:textSize="@dimen/matrix_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.gridlayout.widget.GridLayout>
+
+
+        <View
+            android:id="@+id/d_2_m_sc2"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="25dp"
+            android:background="#D7140707" />
+
+        <Button
+            android:id="@+id/btn_det_2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:onClick="det2"
+            android:text="Решить" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/design_default_color_primary_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/d_2_title_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/matrix_size"
+                android:text="Пожалуйста введите переменные"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/d_2_d_a_g1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/matrix_size"
+            />
+
+            <TextView
+                android:id="@+id/d_2_d_a_g8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/matrix_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

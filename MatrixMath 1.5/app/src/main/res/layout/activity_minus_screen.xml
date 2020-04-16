@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageView2"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:onClick="ariph_back"
+            android:paddingLeft="10dp"
+            android:theme="?attr/actionBarTheme"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Вычитание матриц" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/a_m_sc1"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2A2431" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a11"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a12"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a13"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a21"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a21"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a22"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a22"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a23"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a23"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a31"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a31"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a32"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a32"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m_a33"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a33"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/a_m_sc2"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2A2431" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="-"
+            android:textSize="24dp" />
+
+        <View
+            android:id="@+id/a_m_sc3"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2A2431" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a11"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a12"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a13"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a21"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a21"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a22"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a22"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a23"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a23"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a31"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a31"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a32"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a32"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_m2_a33"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a33"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/a_m_sc4"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2A2431" />
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/btn_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:onClick="minor"
+        android:text="Решить" />
+
+    <View
+
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/design_default_color_primary_dark" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/minus_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Пожалуйста введите переменные" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a11"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a12"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a13"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a21"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a21"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a22"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a22"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a23"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a23"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a31"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="a31"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a32"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a32"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/a_mA_a33"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="a33"
+                            android:focusable="false"
+                            android:inputType="numberSigned"
+                            android:padding="@dimen/TextInputPadding"
+                            android:textSize="@dimen/matrix_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

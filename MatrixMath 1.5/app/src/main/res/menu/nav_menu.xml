@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/calc_screen"
+            android:title="@string/menu_1"
+            />
+        <item
+            android:id="@+id/matrix_kramer_screen"
+            android:title="@string/menu_2" />
+        <item
+            android:id="@+id/matrix_ariph_screen"
+            android:title="@string/menu_4" />
+        <item
+            android:id="@+id/matrix_det_screen"
+            android:title="@string/menu_3" />
+
+
+    </group>
+
+
+</menu>
